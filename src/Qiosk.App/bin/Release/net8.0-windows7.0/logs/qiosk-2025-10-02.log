@@ -169,3 +169,27 @@ File name: 'D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.
 2025-10-02 13:41:04.5249|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
 2025-10-02 13:42:00.5739|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
 2025-10-02 13:42:01.1427|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2025-10-02 13:54:17.7244|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 13:54:17.7648|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 13:54:17.7648|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\ 
+2025-10-02 13:54:18.3960|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 13:54:18.4106|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.xlsx 
+2025-10-02 13:54:19.0817|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-02 13:54:19.0851|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-02 13:54:19.0851|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 13:54:19.8454|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 13:54:33.2241|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 13:58:03.3187|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 13:58:03.9020|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2025-10-02 14:11:54.1288|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 14:11:54.1469|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 14:11:54.1469|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\ 
+2025-10-02 14:11:54.6583|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 14:11:54.6747|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.xlsx 
+2025-10-02 14:11:55.4197|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-02 14:11:55.4197|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-02 14:11:55.4197|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 14:11:56.2047|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 14:12:01.5365|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 14:12:43.3101|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 14:12:43.9105|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 

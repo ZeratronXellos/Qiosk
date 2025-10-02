@@ -1,10 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using Microsoft.Office.Core;
+using QRCoder;
 using Qiosk.App.Models;
 using Qiosk.App.Services.Contracts;
 using Word = Microsoft.Office.Interop.Word;
@@ -37,18 +41,25 @@ public sealed class DocxBadgePrinter : IBadgePrinter
 
         File.Copy(resolvedTemplate, tempDocPath, overwrite: true);
 
+        var temporaryAssets = new List<string>();
+
         try
         {
             EnsureWordInstalled();
-            await PrintWithWordAsync(tempDocPath, printerName, attendee, cancellationToken).ConfigureAwait(false);
+            await PrintWithWordAsync(tempDocPath, printerName, attendee, tempDirectory, temporaryAssets, cancellationToken).ConfigureAwait(false);
         }
         finally
         {
+            foreach (var asset in temporaryAssets)
+            {
+                TryDeleteFile(asset);
+            }
+
             TryDeleteFile(tempDocPath);
         }
     }
 
-    private static Task PrintWithWordAsync(string docPath, string printerName, Attendee attendee, CancellationToken cancellationToken)
+    private static Task PrintWithWordAsync(string docPath, string printerName, Attendee attendee, string assetsDirectory, ICollection<string> temporaryAssets, CancellationToken cancellationToken)
     {
         return RunOnStaThreadAsync(() =>
         {
@@ -84,7 +95,7 @@ public sealed class DocxBadgePrinter : IBadgePrinter
                     activeWindow.WindowState = Word.WdWindowState.wdWindowStateMinimize;
                 }
 
-                ApplyReplacements(document, attendee);
+                ApplyReplacements(document, attendee, assetsDirectory, temporaryAssets);
 
                 document.Save();
                 document.PrintOut(Background: false);
@@ -112,11 +123,14 @@ public sealed class DocxBadgePrinter : IBadgePrinter
         }, cancellationToken);
     }
 
-    private static void ApplyReplacements(Word.Document document, Attendee attendee)
+    private static void ApplyReplacements(Word.Document document, Attendee attendee, string assetsDirectory, ICollection<string> temporaryAssets)
     {
+        var idValue = attendee.Id ?? string.Empty;
+
+        _ = InsertQrCode(document, idValue, assetsDirectory, temporaryAssets);
+
         var replacements = new Dictionary<string, string?>
         {
-            ["{{ID}}"] = attendee.Id,
             ["{{Nume}}"] = attendee.LastName,
             ["{{Prenume}}"] = attendee.FirstName,
             ["{{Rol}}"] = attendee.Role,
@@ -127,6 +141,8 @@ public sealed class DocxBadgePrinter : IBadgePrinter
         {
             ReplaceAll(document, placeholder, value ?? string.Empty);
         }
+
+        ReplaceAll(document, "{{ID}}", idValue);
     }
 
     private static void ReplaceAll(Word.Document document, string placeholder, string value)
@@ -165,6 +181,98 @@ public sealed class DocxBadgePrinter : IBadgePrinter
                 Marshal.FinalReleaseComObject(range);
             }
         }
+    }
+
+    private static bool InsertQrCode(Word.Document document, string idValue, string assetsDirectory, ICollection<string> temporaryAssets)
+    {
+        if (string.IsNullOrWhiteSpace(idValue))
+        {
+            return false;
+        }
+
+        Word.Range? range = null;
+        Word.Find? find = null;
+        Word.InlineShape? inlineShape = null;
+
+        try
+        {
+            range = document.Content;
+            find = range.Find;
+            find.ClearFormatting();
+            find.Replacement.ClearFormatting();
+
+            const string placeholder = "{{ID}}";
+
+            var found = find.Execute(
+                FindText: placeholder,
+                MatchCase: false,
+                MatchWholeWord: false,
+                MatchWildcards: false,
+                MatchSoundsLike: false,
+                MatchAllWordForms: false,
+                Forward: true,
+                Wrap: Word.WdFindWrap.wdFindStop,
+                Format: false,
+                ReplaceWith: string.Empty,
+                Replace: Word.WdReplace.wdReplaceNone);
+
+            if (!found)
+            {
+                return false;
+            }
+
+            range.Text = string.Empty;
+
+            var qrPath = GenerateQrCodeImage(assetsDirectory, idValue);
+            temporaryAssets.Add(qrPath);
+
+            inlineShape = range.InlineShapes.AddPicture(qrPath, LinkToFile: false, SaveWithDocument: true);
+
+            try
+            {
+                inlineShape.LockAspectRatio = MsoTriState.msoTrue;
+                inlineShape.Width = 120f;
+            }
+            catch
+            {
+                // Ignore failures when adjusting QR image geometry.
+            }
+
+            range.Collapse(Word.WdCollapseDirection.wdCollapseEnd);
+
+            return true;
+        }
+        finally
+        {
+            if (inlineShape is not null)
+            {
+                Marshal.FinalReleaseComObject(inlineShape);
+            }
+
+            if (find is not null)
+            {
+                Marshal.FinalReleaseComObject(find);
+            }
+
+            if (range is not null)
+            {
+                Marshal.FinalReleaseComObject(range);
+            }
+        }
+    }
+
+    private static string GenerateQrCodeImage(string assetsDirectory, string idValue)
+    {
+        Directory.CreateDirectory(assetsDirectory);
+        var qrPath = Path.Combine(assetsDirectory, $"qr-{Guid.NewGuid():N}.png");
+
+        using var generator = new QRCodeGenerator();
+        using var data = generator.CreateQrCode(idValue, QRCodeGenerator.ECCLevel.Q);
+        using var qrCode = new QRCode(data);
+        using var bitmap = qrCode.GetGraphic(20, Color.Black, Color.White, drawQuietZones: true);
+        bitmap.Save(qrPath, ImageFormat.Png);
+
+        return qrPath;
     }
 
     private static void EnsureWordInstalled()

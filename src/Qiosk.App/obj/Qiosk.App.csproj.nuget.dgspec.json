@@ -89,6 +89,10 @@
               "target": "Package",
               "version": "[6.0.4, )"
             },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
             "ZXing.Net": {
               "target": "Package",
               "version": "[0.16.10, )"

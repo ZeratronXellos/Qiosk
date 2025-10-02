@@ -490,9 +490,11 @@ public partial class ShellViewModel : ObservableObject, IDisposable
     }
     private void ProcessDetection(QrCodeDetection detection)
     {
+        var cooldown = TimeSpan.FromSeconds(_optionsMonitor.CurrentValue.CooldownSeconds);
+
         if (IsConfirmationVisible || IsPrintingVisible || IsAdminVisible)
         {
-            _qrScannerService.RequestPause(TimeSpan.FromSeconds(_optionsMonitor.CurrentValue.CooldownSeconds));
+            _qrScannerService.RequestPause(cooldown);
             return;
         }
 
@@ -507,15 +509,29 @@ public partial class ShellViewModel : ObservableObject, IDisposable
         {
             SystemSounds.Hand.Play();
             ShowStatus($"Cod necunoscut: {code}", true, TimeSpan.FromSeconds(5));
-            _qrScannerService.RequestPause(TimeSpan.FromSeconds(_optionsMonitor.CurrentValue.CooldownSeconds));
+            _qrScannerService.RequestPause(cooldown);
+            return;
+        }
+
+        try
+        {
+            _attendeeRepository.MarkPresentAsync(attendee.Id).GetAwaiter().GetResult();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Nu am putut marca participantul {AttendeeId} ca prezent.", attendee.Id);
+            SystemSounds.Hand.Play();
+            ShowStatus("Nu am putut actualiza statusul din fisierul Excel.", true, TimeSpan.FromSeconds(8));
+            _qrScannerService.RequestPause(cooldown);
             return;
         }
 
         SystemSounds.Asterisk.Play();
         CurrentAttendee = attendee;
         IsConfirmationVisible = true;
-        _qrScannerService.RequestPause(TimeSpan.FromSeconds(_optionsMonitor.CurrentValue.CooldownSeconds));
+        _qrScannerService.RequestPause(cooldown);
     }
+
     private void ShowStatus(string message, bool isError, TimeSpan? hideAfter = null)
     {
         void ApplyStatus()

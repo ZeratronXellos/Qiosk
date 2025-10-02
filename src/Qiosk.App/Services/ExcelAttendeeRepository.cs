@@ -19,6 +19,7 @@ public sealed class ExcelAttendeeRepository : IAttendeeRepository, IDisposable
     private readonly IKioskSettingsService _settingsService;
     private readonly ILogger<ExcelAttendeeRepository> _logger;
     private readonly SemaphoreSlim _loadSync = new(1, 1);
+    private readonly SemaphoreSlim _writeSync = new(1, 1);
     private readonly Dictionary<string, Attendee> _cache = new(StringComparer.OrdinalIgnoreCase);
 
     private bool _disposed;
@@ -66,7 +67,7 @@ public sealed class ExcelAttendeeRepository : IAttendeeRepository, IDisposable
 
             if (!File.Exists(excelPath))
             {
-                throw new FileNotFoundException($"Nu gasesc fi?ierul Excel la calea '{excelPath}'.", excelPath);
+                throw new FileNotFoundException($"Nu gasesc fisierul Excel la calea '{excelPath}'.", excelPath);
             }
 
             _logger.LogInformation("Loading attendees from {Path}", excelPath);
@@ -75,7 +76,7 @@ public sealed class ExcelAttendeeRepository : IAttendeeRepository, IDisposable
             var worksheet = workbook.Worksheets.FirstOrDefault();
             if (worksheet is null)
             {
-                _logger.LogWarning("Fi?ierul Excel {Path} nu con?ine foi de lucru.", excelPath);
+                _logger.LogWarning("Fisierul Excel {Path} nu contine foi de lucru.", excelPath);
                 lock (_cache)
                 {
                     _cache.Clear();
@@ -122,6 +123,69 @@ public sealed class ExcelAttendeeRepository : IAttendeeRepository, IDisposable
         }
     }
 
+    public async ValueTask MarkPresentAsync(string attendeeId, CancellationToken cancellationToken = default)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(attendeeId);
+        await EnsureNotDisposedAsync().ConfigureAwait(false);
+
+        var normalizedId = attendeeId.Trim();
+        var settings = await _settingsService.GetAsync(cancellationToken).ConfigureAwait(false);
+        var options = _optionsMonitor.CurrentValue;
+        var excelPath = ResolvePath(settings.ExcelPathOverride, options.ExcelPath);
+
+        if (!File.Exists(excelPath))
+        {
+            throw new FileNotFoundException($"Nu gasesc fisierul Excel la calea '{excelPath}'.", excelPath);
+        }
+
+        await _writeSync.WaitAsync(cancellationToken).ConfigureAwait(false);
+        try
+        {
+            await Task.Run(() =>
+            {
+                using var workbook = new XLWorkbook(excelPath);
+                var worksheet = workbook.Worksheets.FirstOrDefault();
+                if (worksheet is null)
+                {
+                    _logger.LogWarning("Fisierul Excel {Path} nu contine foi de lucru.", excelPath);
+                    return;
+                }
+
+                var rows = worksheet.RangeUsed()?.RowsUsed().Skip(1) ?? Enumerable.Empty<IXLRangeRow>();
+                var updated = false;
+
+                foreach (var row in rows)
+                {
+                    cancellationToken.ThrowIfCancellationRequested();
+
+                    var id = row.Cell(1).GetValue<string>().Trim();
+                    if (!string.Equals(id, normalizedId, StringComparison.OrdinalIgnoreCase))
+                    {
+                        continue;
+                    }
+
+                    var statusCell = row.Cell(6);
+                    var currentValue = statusCell.GetValue<string>();
+                    if (string.IsNullOrWhiteSpace(currentValue))
+                    {
+                        statusCell.Value = "Prezent";
+                        updated = true;
+                    }
+
+                    break;
+                }
+
+                if (updated)
+                {
+                    workbook.Save();
+                }
+            }, cancellationToken).ConfigureAwait(false);
+        }
+        finally
+        {
+            _writeSync.Release();
+        }
+    }
     private static string ResolvePath(string overridePath, string defaultPath)
     {
         var candidate = string.IsNullOrWhiteSpace(overridePath) ? defaultPath : overridePath;
@@ -156,6 +220,7 @@ public sealed class ExcelAttendeeRepository : IAttendeeRepository, IDisposable
         }
 
         _loadSync.Dispose();
+        _writeSync.Dispose();
         _disposed = true;
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3ER0KwLxo5Y=",
+  "dgSpecHash": "9sIZziyriH8=",
   "success": true,
   "projectFilePath": "D:\\qiosk\\src\\Qiosk.App\\Qiosk.App.csproj",
   "expectedPackageFiles": [
@@ -45,6 +45,7 @@
     "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoftofficecore\\15.0.0\\microsoftofficecore.15.0.0.nupkg.sha512",
     "C:\\Users\\lucian.olaru\\.nuget\\packages\\nlog\\6.0.4\\nlog.6.0.4.nupkg.sha512",
     "C:\\Users\\lucian.olaru\\.nuget\\packages\\nlog.extensions.logging\\6.0.4\\nlog.extensions.logging.6.0.4.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\qrcoder\\1.6.0\\qrcoder.1.6.0.nupkg.sha512",
     "C:\\Users\\lucian.olaru\\.nuget\\packages\\rbush.signed\\4.0.0\\rbush.signed.4.0.0.nupkg.sha512",
     "C:\\Users\\lucian.olaru\\.nuget\\packages\\sixlabors.fonts\\1.0.0\\sixlabors.fonts.1.0.0.nupkg.sha512",
     "C:\\Users\\lucian.olaru\\.nuget\\packages\\system.diagnostics.diagnosticsource\\9.0.9\\system.diagnostics.diagnosticsource.9.0.9.nupkg.sha512",
