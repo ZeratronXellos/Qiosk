@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Globalization;
 using ClosedXML.Excel;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -20,6 +21,15 @@ public sealed class ExcelAttendeeRepository : IAttendeeRepository, IDisposable
     private readonly ILogger<ExcelAttendeeRepository> _logger;
     private readonly SemaphoreSlim _loadSync = new(1, 1);
     private readonly SemaphoreSlim _writeSync = new(1, 1);
+    private const int IdColumn = 1;
+    private const int LastNameColumn = 2;
+    private const int FirstNameColumn = 3;
+    private const int RoleColumn = 4;
+    private const int CompanyColumn = 5;
+    private const int StatusColumn = 6;
+    private const int CheckInColumn = 7;
+    private const int BadgeColumn = 8;
+
     private readonly Dictionary<string, Attendee> _cache = new(StringComparer.OrdinalIgnoreCase);
 
     private bool _disposed;
@@ -91,16 +101,16 @@ public sealed class ExcelAttendeeRepository : IAttendeeRepository, IDisposable
             {
                 cancellationToken.ThrowIfCancellationRequested();
 
-                var id = row.Cell(1).GetValue<string>().Trim();
+                var id = row.Cell(IdColumn).GetValue<string>().Trim();
                 if (string.IsNullOrWhiteSpace(id))
                 {
                     continue;
                 }
 
-                var lastName = row.Cell(2).GetValue<string>().Trim();
-                var firstName = row.Cell(3).GetValue<string>().Trim();
-                var role = row.Cell(4).GetValue<string>().Trim();
-                var company = row.Cell(5).GetValue<string>().Trim();
+                var lastName = row.Cell(LastNameColumn).GetValue<string>().Trim();
+                var firstName = row.Cell(FirstNameColumn).GetValue<string>().Trim();
+                var role = row.Cell(RoleColumn).GetValue<string>().Trim();
+                var company = row.Cell(CompanyColumn).GetValue<string>().Trim();
 
                 var attendee = new Attendee(id, lastName, firstName, role, company);
                 items[id] = attendee;
@@ -158,17 +168,23 @@ public sealed class ExcelAttendeeRepository : IAttendeeRepository, IDisposable
                 {
                     cancellationToken.ThrowIfCancellationRequested();
 
-                    var id = row.Cell(1).GetValue<string>().Trim();
+                    var id = row.Cell(IdColumn).GetValue<string>().Trim();
                     if (!string.Equals(id, normalizedId, StringComparison.OrdinalIgnoreCase))
                     {
                         continue;
                     }
 
-                    var statusCell = row.Cell(6);
+                    var statusCell = row.Cell(StatusColumn);
                     var currentValue = statusCell.GetValue<string>();
                     if (string.IsNullOrWhiteSpace(currentValue))
                     {
                         statusCell.Value = "Prezent";
+                        var checkInCell = row.Cell(CheckInColumn);
+                        if (string.IsNullOrWhiteSpace(checkInCell.GetValue<string>()))
+                        {
+                            checkInCell.Value = DateTime.Now.ToString("HH:mm", CultureInfo.InvariantCulture);
+                        }
+
                         updated = true;
                     }
 
@@ -186,6 +202,70 @@ public sealed class ExcelAttendeeRepository : IAttendeeRepository, IDisposable
             _writeSync.Release();
         }
     }
+
+    public async ValueTask MarkBadgePrintedAsync(string attendeeId, CancellationToken cancellationToken = default)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(attendeeId);
+        await EnsureNotDisposedAsync().ConfigureAwait(false);
+
+        var normalizedId = attendeeId.Trim();
+        var settings = await _settingsService.GetAsync(cancellationToken).ConfigureAwait(false);
+        var options = _optionsMonitor.CurrentValue;
+        var excelPath = ResolvePath(settings.ExcelPathOverride, options.ExcelPath);
+
+        if (!File.Exists(excelPath))
+        {
+            throw new FileNotFoundException($"Nu gasesc fisierul Excel la calea '{excelPath}'.", excelPath);
+        }
+
+        await _writeSync.WaitAsync(cancellationToken).ConfigureAwait(false);
+        try
+        {
+            await Task.Run(() =>
+            {
+                using var workbook = new XLWorkbook(excelPath);
+                var worksheet = workbook.Worksheets.FirstOrDefault();
+                if (worksheet is null)
+                {
+                    _logger.LogWarning("Fisierul Excel {Path} nu contine foi de lucru.", excelPath);
+                    return;
+                }
+
+                var rows = worksheet.RangeUsed()?.RowsUsed().Skip(1) ?? Enumerable.Empty<IXLRangeRow>();
+                var updated = false;
+
+                foreach (var row in rows)
+                {
+                    cancellationToken.ThrowIfCancellationRequested();
+
+                    var id = row.Cell(IdColumn).GetValue<string>().Trim();
+                    if (!string.Equals(id, normalizedId, StringComparison.OrdinalIgnoreCase))
+                    {
+                        continue;
+                    }
+
+                    var badgeCell = row.Cell(BadgeColumn);
+                    if (string.IsNullOrWhiteSpace(badgeCell.GetValue<string>()))
+                    {
+                        badgeCell.Value = "DA";
+                        updated = true;
+                    }
+
+                    break;
+                }
+
+                if (updated)
+                {
+                    workbook.Save();
+                }
+            }, cancellationToken).ConfigureAwait(false);
+        }
+        finally
+        {
+            _writeSync.Release();
+        }
+    }
+
     private static string ResolvePath(string overridePath, string defaultPath)
     {
         var candidate = string.IsNullOrWhiteSpace(overridePath) ? defaultPath : overridePath;

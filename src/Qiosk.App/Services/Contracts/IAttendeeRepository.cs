@@ -10,4 +10,5 @@ public interface IAttendeeRepository
     Attendee? FindById(string id);
     IReadOnlyCollection<Attendee> All { get; }
     ValueTask MarkPresentAsync(string attendeeId, CancellationToken cancellationToken = default);
+    ValueTask MarkBadgePrintedAsync(string attendeeId, CancellationToken cancellationToken = default);
 }

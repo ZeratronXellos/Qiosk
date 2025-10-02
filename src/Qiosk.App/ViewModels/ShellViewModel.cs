@@ -195,6 +195,20 @@ public partial class ShellViewModel : ObservableObject, IDisposable
 
         try
         {
+            await _attendeeRepository.MarkBadgePrintedAsync(attendee.Id);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Nu am putut marca intentia de print pentru participantul {AttendeeId}.", attendee.Id);
+            SystemSounds.Hand.Play();
+            ShowStatus("Nu am putut actualiza optiunea de print din fisierul Excel.", true, TimeSpan.FromSeconds(8));
+            IsPrintingVisible = false;
+            CurrentAttendee = null;
+            return;
+        }
+
+        try
+        {
             var printerName = SelectedPrinter ?? string.Empty;
             await _badgePrinter.PrintAsync(attendee, printerName, templatePath);
             SystemSounds.Asterisk.Play();
