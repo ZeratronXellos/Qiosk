@@ -82,3 +82,4 @@ D:\qiosk\src\Qiosk.App\obj\Release\net8.0-windows7.0\Qiosk.App.pdb
 D:\qiosk\src\Qiosk.App\obj\Release\net8.0-windows7.0\Qiosk.App.genruntimeconfig.cache
 D:\qiosk\src\Qiosk.App\obj\Release\net8.0-windows7.0\ref\Qiosk.App.dll
 D:\qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\QRCoder.dll
+D:\qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\DirectShowLib.dll

@@ -266,6 +266,28 @@
                                 <TextBlock Text="Imprimanta" Margin="0,24,0,0" FontSize="16" Foreground="{StaticResource TextSecondaryBrush}" />
                                 <ComboBox ItemsSource="{Binding Printers}" SelectedItem="{Binding SelectedPrinter}" />
                                 <CheckBox Content="Mod blocare kiosk" IsChecked="{Binding IsLockMode}" Margin="0,24,0,0" FontSize="18" />
+                                <StackPanel Margin="0,24,0,0" Visibility="{Binding IsCameraZoomSupported, Converter={StaticResource BoolToVisibility}}">
+                                    <TextBlock Text="Zoom camera" FontSize="16" Foreground="{StaticResource TextSecondaryBrush}" />
+                                    <Slider Minimum="{Binding CameraZoomMinimum}"
+                                            Maximum="{Binding CameraZoomMaximum}"
+                                            SmallChange="{Binding CameraZoomStep}"
+                                            LargeChange="{Binding CameraZoomStep}"
+                                            TickFrequency="{Binding CameraZoomStep}"
+                                            IsSnapToTickEnabled="True"
+                                            Value="{Binding CameraZoomValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                    <TextBlock Text="{Binding CameraZoomValue}" FontSize="14" Foreground="{StaticResource TextSecondaryBrush}" HorizontalAlignment="Right" />
+                                </StackPanel>
+                                <StackPanel Margin="0,24,0,0" Visibility="{Binding IsCameraBrightnessSupported, Converter={StaticResource BoolToVisibility}}">
+                                    <TextBlock Text="Luminozitate camera" FontSize="16" Foreground="{StaticResource TextSecondaryBrush}" />
+                                    <Slider Minimum="{Binding CameraBrightnessMinimum}"
+                                            Maximum="{Binding CameraBrightnessMaximum}"
+                                            SmallChange="{Binding CameraBrightnessStep}"
+                                            LargeChange="{Binding CameraBrightnessStep}"
+                                            TickFrequency="{Binding CameraBrightnessStep}"
+                                            IsSnapToTickEnabled="True"
+                                            Value="{Binding CameraBrightnessValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                    <TextBlock Text="{Binding CameraBrightnessValue}" FontSize="14" Foreground="{StaticResource TextSecondaryBrush}" HorizontalAlignment="Right" />
+                                </StackPanel>
                             </StackPanel>
                             <StackPanel Grid.Column="1">
                                 <TextBlock Text="Fisier Excel participanti" FontSize="16" Foreground="{StaticResource TextSecondaryBrush}" />

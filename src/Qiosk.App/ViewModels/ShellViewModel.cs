@@ -31,6 +31,9 @@ public partial class ShellViewModel : ObservableObject, IDisposable
     private readonly Dispatcher _dispatcher;
     private readonly DispatcherTimer _statusTimer;
 
+    private bool _updatingCameraControls;
+    private bool _zoomWarningShown;
+    private bool _brightnessWarningShown;
     private KioskSettings? _settings;
     private bool _initialized;
     private bool _disposed;
@@ -117,6 +120,36 @@ public partial class ShellViewModel : ObservableObject, IDisposable
 
     [ObservableProperty]
     private string _templatePathInput = string.Empty;
+
+    [ObservableProperty]
+    private bool _isCameraZoomSupported;
+
+    [ObservableProperty]
+    private int _cameraZoomMinimum;
+
+    [ObservableProperty]
+    private int _cameraZoomMaximum;
+
+    [ObservableProperty]
+    private int _cameraZoomStep = 1;
+
+    [ObservableProperty]
+    private int _cameraZoomValue;
+
+    [ObservableProperty]
+    private bool _isCameraBrightnessSupported;
+
+    [ObservableProperty]
+    private int _cameraBrightnessMinimum;
+
+    [ObservableProperty]
+    private int _cameraBrightnessMaximum;
+
+    [ObservableProperty]
+    private int _cameraBrightnessStep = 1;
+
+    [ObservableProperty]
+    private int _cameraBrightnessValue;
 
     partial void OnSelectedCameraChanged(CameraDevice? value)
     {
@@ -457,11 +490,13 @@ public partial class ShellViewModel : ObservableObject, IDisposable
         try
         {
             await _qrScannerService.StartAsync(SelectedCamera?.MonikerString, cancellationToken).ConfigureAwait(false);
+            await _dispatcher.InvokeAsync(UpdateCameraControlState);
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Nu am putut porni camera QR.");
             ShowStatus("Nu am putut porni camera.", true, TimeSpan.FromSeconds(10));
+            await _dispatcher.InvokeAsync(ResetCameraControlState);
         }
     }
 
@@ -594,12 +629,143 @@ public partial class ShellViewModel : ObservableObject, IDisposable
 
     private void OnStatusTimerTick(object? sender, EventArgs e) => HideStatus();
 
+
+    private void ResetCameraControlState()
+    {
+        _updatingCameraControls = true;
+        try
+        {
+            IsCameraZoomSupported = false;
+            CameraZoomMinimum = 0;
+            CameraZoomMaximum = 0;
+            CameraZoomStep = 1;
+            CameraZoomValue = 0;
+
+            IsCameraBrightnessSupported = false;
+            CameraBrightnessMinimum = 0;
+            CameraBrightnessMaximum = 0;
+            CameraBrightnessStep = 1;
+            CameraBrightnessValue = 0;
+
+            _zoomWarningShown = false;
+            _brightnessWarningShown = false;
+        }
+        finally
+        {
+            _updatingCameraControls = false;
+        }
+    }
+
+    private void UpdateCameraControlState()
+    {
+        _updatingCameraControls = true;
+        try
+        {
+            var capabilities = _qrScannerService.GetCurrentCameraControlCapabilities();
+
+            if (capabilities.Zoom is { } zoom)
+            {
+                IsCameraZoomSupported = true;
+                CameraZoomMinimum = zoom.Minimum;
+                CameraZoomMaximum = zoom.Maximum;
+                CameraZoomStep = Math.Max(1, zoom.Step);
+                CameraZoomValue = Math.Clamp(zoom.Current, zoom.Minimum, zoom.Maximum);
+            }
+            else
+            {
+                IsCameraZoomSupported = false;
+                CameraZoomValue = 0;
+            }
+
+            if (capabilities.Brightness is { } brightness)
+            {
+                IsCameraBrightnessSupported = true;
+                CameraBrightnessMinimum = brightness.Minimum;
+                CameraBrightnessMaximum = brightness.Maximum;
+                CameraBrightnessStep = Math.Max(1, brightness.Step);
+                CameraBrightnessValue = Math.Clamp(brightness.Current, brightness.Minimum, brightness.Maximum);
+            }
+            else
+            {
+                IsCameraBrightnessSupported = false;
+                CameraBrightnessValue = 0;
+            }
+
+            if (!IsCameraZoomSupported)
+            {
+                _zoomWarningShown = false;
+            }
+
+            if (!IsCameraBrightnessSupported)
+            {
+                _brightnessWarningShown = false;
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogDebug(ex, "Nu am putut actualiza setarile camerei.");
+            IsCameraZoomSupported = false;
+            IsCameraBrightnessSupported = false;
+        }
+        finally
+        {
+            _updatingCameraControls = false;
+        }
+    }
+
+    partial void OnCameraZoomValueChanged(int value)
+    {
+        if (_updatingCameraControls || !IsCameraZoomSupported)
+        {
+            return;
+        }
+
+        if (!_qrScannerService.TrySetCameraZoom(value))
+        {
+            if (!_zoomWarningShown)
+            {
+                ShowStatus("Camera nu accepta ajustarea zoomului.", true, TimeSpan.FromSeconds(5));
+                _zoomWarningShown = true;
+            }
+
+            _ = _dispatcher.InvokeAsync(UpdateCameraControlState);
+        }
+        else
+        {
+            _zoomWarningShown = false;
+        }
+    }
+
+    partial void OnCameraBrightnessValueChanged(int value)
+    {
+        if (_updatingCameraControls || !IsCameraBrightnessSupported)
+        {
+            return;
+        }
+
+        if (!_qrScannerService.TrySetCameraBrightness(value))
+        {
+            if (!_brightnessWarningShown)
+            {
+                ShowStatus("Camera nu accepta ajustarea luminozitatii.", true, TimeSpan.FromSeconds(5));
+                _brightnessWarningShown = true;
+            }
+
+            _ = _dispatcher.InvokeAsync(UpdateCameraControlState);
+        }
+        else
+        {
+            _brightnessWarningShown = false;
+        }
+    }
+
     private async Task ApplyCameraSelectionAsync(CameraDevice camera)
     {
         try
         {
             await _dispatcher.InvokeAsync(() => IsBusy = true);
             await _qrScannerService.StartAsync(camera.MonikerString).ConfigureAwait(false);
+            await _dispatcher.InvokeAsync(UpdateCameraControlState);
             if (_settings is not null)
             {
                 _settings.DefaultCameraMoniker = camera.MonikerString;
@@ -611,6 +777,7 @@ public partial class ShellViewModel : ObservableObject, IDisposable
         {
             _logger.LogError(ex, "Nu am putut schimba camera.");
             ShowStatus("Eroare la schimbarea camerei.", true, TimeSpan.FromSeconds(6));
+            await _dispatcher.InvokeAsync(ResetCameraControlState);
         }
         finally
         {

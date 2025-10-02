@@ -82,3 +82,4 @@ D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Microsoft.Office.Interop.Word
 D:\qiosk\src\Qiosk.App\obj\Debug\net8.0-windows7.0\Qiosk.App.sourcelink.json
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Office.dll
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\QRCoder.dll
+D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\DirectShowLib.dll

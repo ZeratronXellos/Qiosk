@@ -12,6 +12,7 @@
           "AForge.Video.DirectShow": "2.2.5",
           "ClosedXML": "0.105.0",
           "CommunityToolkit.Mvvm": "8.4.0",
+          "DirectShowLib": "1.0.0",
           "Microsoft.Extensions.Hosting": "9.0.9",
           "Microsoft.Office.Interop.Word": "15.0.4797.1004",
           "MicrosoftOfficeCore": "15.0.0",
@@ -83,6 +84,14 @@
           "lib/net8.0/CommunityToolkit.Mvvm.dll": {
             "assemblyVersion": "8.4.0.0",
             "fileVersion": "8.4.0.1"
+          }
+        }
+      },
+      "DirectShowLib/1.0.0": {
+        "runtime": {
+          "lib/DirectShowLib.dll": {
+            "assemblyVersion": "2.1.0.1599",
+            "fileVersion": "2.1.0.1599"
           }
         }
       },
@@ -699,6 +708,13 @@
       "sha512": "sha512-tqVU8yc/ADO9oiTRyTnwhFN68hCwvkliMierptWOudIAvWY1mWCh5VFh+guwHJmpMwfg0J0rY+yyd5Oy7ty9Uw==",
       "path": "communitytoolkit.mvvm/8.4.0",
       "hashPath": "communitytoolkit.mvvm.8.4.0.nupkg.sha512"
+    },
+    "DirectShowLib/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oWwOk9Lj8JIMWPsfx8bUbJ/uWhHlRKpMaU5oVf8Kl9SLMhmrnr0kXg0ebDv3oOmKxZ/D1yrmw+x7UGmgMqUxFA==",
+      "path": "directshowlib/1.0.0",
+      "hashPath": "directshowlib.1.0.0.nupkg.sha512"
     },
     "DocumentFormat.OpenXml/3.1.1": {
       "type": "package",

@@ -16,5 +16,8 @@ public interface IQrScannerService : IDisposable
     Task StopAsync(CancellationToken cancellationToken = default);
     void RequestPause(TimeSpan duration);
     IReadOnlyList<CameraDevice> GetAvailableCameras();
+    CameraControlCapabilities GetCurrentCameraControlCapabilities();
+    bool TrySetCameraZoom(int value);
+    bool TrySetCameraBrightness(int value);
     bool IsRunning { get; }
 }

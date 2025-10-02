@@ -246,3 +246,136 @@ File name: 'D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.
 2025-10-02 14:44:22.6210|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
 2025-10-02 14:44:34.2665|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
 2025-10-02 14:44:34.8680|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2025-10-02 15:47:12.6375|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 15:47:12.6472|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 15:47:12.6472|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\ 
+2025-10-02 15:47:13.2594|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 15:47:13.2982|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.xlsx 
+2025-10-02 15:47:13.9704|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 1 attendees from Excel. 
+2025-10-02 15:47:13.9741|INFO|Qiosk.App.ViewModels.ShellViewModel|1 participanti incarcati din Excel. 
+2025-10-02 15:47:13.9741|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 15:47:14.7202|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 15:47:44.2798|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 15:47:44.8678|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2025-10-02 15:49:24.9653|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 15:49:24.9992|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 15:49:24.9992|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\ 
+2025-10-02 15:49:25.5084|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 15:49:25.5232|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.xlsx 
+2025-10-02 15:49:26.1929|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 1 attendees from Excel. 
+2025-10-02 15:49:26.1929|INFO|Qiosk.App.ViewModels.ShellViewModel|1 participanti incarcati din Excel. 
+2025-10-02 15:49:26.1929|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 15:49:26.9304|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 15:49:39.1423|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 15:49:39.7375|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_27c2&pid_052d&mi_00#7&30653fe1&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 15:49:49.9718|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 15:49:50.0069|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 15:49:50.0069|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\ 
+2025-10-02 15:49:50.7349|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_27c2&pid_052d&mi_00#7&30653fe1&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 15:49:50.7562|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.xlsx 
+2025-10-02 15:49:51.8873|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 1 attendees from Excel. 
+2025-10-02 15:49:51.8940|INFO|Qiosk.App.ViewModels.ShellViewModel|1 participanti incarcati din Excel. 
+2025-10-02 15:49:51.8940|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 15:49:52.0401|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_27c2&pid_052d&mi_00#7&30653fe1&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 15:50:21.6969|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 15:50:21.7754|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2025-10-02 15:52:16.2761|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 15:52:16.3115|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 15:52:16.3115|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\ 
+2025-10-02 15:52:16.9163|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 15:52:16.9317|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.xlsx 
+2025-10-02 15:52:17.7856|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 1 attendees from Excel. 
+2025-10-02 15:52:17.7856|INFO|Qiosk.App.ViewModels.ShellViewModel|1 participanti incarcati din Excel. 
+2025-10-02 15:52:17.7856|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 15:52:18.3109|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 15:52:30.9495|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 15:52:31.5120|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_0c45&pid_0800&mi_00#7&121569dc&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 15:52:38.0064|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 15:52:38.0434|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 15:52:38.0434|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\ 
+2025-10-02 15:52:38.9688|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_0c45&pid_0800&mi_00#7&121569dc&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 15:52:38.9934|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.xlsx 
+2025-10-02 15:52:40.1502|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 1 attendees from Excel. 
+2025-10-02 15:52:40.1502|INFO|Qiosk.App.ViewModels.ShellViewModel|1 participanti incarcati din Excel. 
+2025-10-02 15:52:40.1502|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 15:52:40.8620|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_0c45&pid_0800&mi_00#7&121569dc&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 15:53:10.1711|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 15:53:13.3121|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 15:53:22.3973|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 15:53:25.6098|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 15:54:06.3004|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 15:58:07.2182|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 15:58:07.2537|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 15:58:07.2537|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\ 
+2025-10-02 15:58:07.7593|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_0c45&pid_0800&mi_00#7&121569dc&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 15:58:07.7917|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.xlsx 
+2025-10-02 15:58:08.4547|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 1 attendees from Excel. 
+2025-10-02 15:58:08.4547|INFO|Qiosk.App.ViewModels.ShellViewModel|1 participanti incarcati din Excel. 
+2025-10-02 15:58:08.4547|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 15:58:09.4159|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_0c45&pid_0800&mi_00#7&121569dc&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 15:58:31.5179|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 15:58:34.6458|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 15:58:37.7648|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 15:58:40.8582|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 15:58:44.2309|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 15:58:47.4006|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 15:58:50.5663|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 15:59:53.6049|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 15:59:56.7236|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 16:00:06.8939|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 16:01:48.6025|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 16:01:48.6025|ERROR|Qiosk.App.ViewModels.ShellViewModel|Nu am putut marca participantul https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 ca prezent. System.IO.IOException: The process cannot access the file 'D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.xlsx' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.Open(String path, FileMode mode, FileAccess access, FileShare share)
+   at DocumentFormat.OpenXml.Features.FilePackageFeature.CreateStream(String path, PackageOpenMode openMode)
+   at DocumentFormat.OpenXml.Features.FilePackageFeature..ctor(String path, PackageOpenMode mode)
+   at DocumentFormat.OpenXml.Builder.OpenXmlPackageBuilderExtensions.Open[TPackage](IPackageFactory`1 builder, String file, PackageOpenMode mode)
+   at DocumentFormat.OpenXml.Builder.OpenXmlPackageBuilderExtensions.Open[TPackage](IPackageFactory`1 builder, String file, Boolean isEditing)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(String path, Boolean isEditable, OpenSettings openSettings)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(String path, Boolean isEditable)
+   at ClosedXML.Excel.XLWorkbook.LoadSheets(String fileName)
+   at ClosedXML.Excel.XLWorkbook.Load(String file)
+   at ClosedXML.Excel.XLWorkbook..ctor(String file, LoadOptions loadOptions)
+   at ClosedXML.Excel.XLWorkbook..ctor(String file)
+   at Qiosk.App.Services.ExcelAttendeeRepository.<>c__DisplayClass20_0.<MarkPresentAsync>b__0() in D:\qiosk\src\Qiosk.App\Services\ExcelAttendeeRepository.cs:line 156
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Qiosk.App.Services.ExcelAttendeeRepository.MarkPresentAsync(String attendeeId, CancellationToken cancellationToken) in D:\qiosk\src\Qiosk.App\Services\ExcelAttendeeRepository.cs:line 154
+   at Qiosk.App.ViewModels.ShellViewModel.ProcessDetection(QrCodeDetection detection) in D:\qiosk\src\Qiosk.App\ViewModels\ShellViewModel.cs:line 567
+2025-10-02 16:01:51.6546|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 16:01:51.6546|ERROR|Qiosk.App.ViewModels.ShellViewModel|Nu am putut marca participantul https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 ca prezent. System.IO.IOException: The process cannot access the file 'D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.xlsx' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.Open(String path, FileMode mode, FileAccess access, FileShare share)
+   at DocumentFormat.OpenXml.Features.FilePackageFeature.CreateStream(String path, PackageOpenMode openMode)
+   at DocumentFormat.OpenXml.Features.FilePackageFeature..ctor(String path, PackageOpenMode mode)
+   at DocumentFormat.OpenXml.Builder.OpenXmlPackageBuilderExtensions.Open[TPackage](IPackageFactory`1 builder, String file, PackageOpenMode mode)
+   at DocumentFormat.OpenXml.Builder.OpenXmlPackageBuilderExtensions.Open[TPackage](IPackageFactory`1 builder, String file, Boolean isEditing)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(String path, Boolean isEditable, OpenSettings openSettings)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(String path, Boolean isEditable)
+   at ClosedXML.Excel.XLWorkbook.LoadSheets(String fileName)
+   at ClosedXML.Excel.XLWorkbook.Load(String file)
+   at ClosedXML.Excel.XLWorkbook..ctor(String file, LoadOptions loadOptions)
+   at ClosedXML.Excel.XLWorkbook..ctor(String file)
+   at Qiosk.App.Services.ExcelAttendeeRepository.<>c__DisplayClass20_0.<MarkPresentAsync>b__0() in D:\qiosk\src\Qiosk.App\Services\ExcelAttendeeRepository.cs:line 156
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Qiosk.App.Services.ExcelAttendeeRepository.MarkPresentAsync(String attendeeId, CancellationToken cancellationToken) in D:\qiosk\src\Qiosk.App\Services\ExcelAttendeeRepository.cs:line 154
+   at Qiosk.App.ViewModels.ShellViewModel.ProcessDetection(QrCodeDetection detection) in D:\qiosk\src\Qiosk.App\ViewModels\ShellViewModel.cs:line 567
+2025-10-02 16:01:56.6209|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 16:01:59.7754|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 16:02:02.9456|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 16:02:06.1141|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 16:02:11.7521|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 16:02:12.0421|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
