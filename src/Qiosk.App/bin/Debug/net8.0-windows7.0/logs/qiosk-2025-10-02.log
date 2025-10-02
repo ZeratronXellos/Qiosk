@@ -1,0 +1,25 @@
+2025-10-02 09:17:56.9450|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 09:17:56.9599|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 09:17:56.9599|INFO|Microsoft.Hosting.Lifetime|Content root path: d:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-02 09:17:57.6514|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 09:17:57.7242|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from d:\Qiosk\src\Qiosk.App\Data\attendees.xlsx 
+2025-10-02 09:17:58.4622|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-02 09:17:58.4668|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-02 09:17:58.4668|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 09:17:59.1180|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 09:18:04.3705|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 09:18:06.8813|ERROR|Qiosk.App.ViewModels.ShellViewModel|Eroare la printarea ecusonului. System.Exception: Xceed.Document.NET.Licenser.LicenseKey property must be set to a valid license key in the code of your application before using this product. Please refer to the Licensing topic in the documentation for more information on this exception.
+   at Xceed.Utils.Exceptions.ThrowException.ThrowLicenseException(Type type, Object instance, String message)
+   at Xceed.Document.NET.DocumentLicense.ThrowNoKeyInCodeAndRegistry()
+   at Xceed.Utils.Licensing.XceedLicense.Initialize(String licenseKey, Type licenserType, Boolean allowThrow)
+   at Xceed.Utils.Licensing.XceedLicense.Initialize(String licenseKey, Type licenserType)
+   at Xceed.Document.NET.DocumentLicense.CreateLicense(String licenseKey, Type licenserType)
+   at Xceed.Document.NET.Licenser.VerifyLicense()
+   at Xceed.Document.NET.DocumentElement..ctor(Document document, XElement xml)
+   at Xceed.Document.NET.Container..ctor(Document document, XElement xml)
+   at Xceed.Document.NET.Document..ctor(Document document, XElement xml)
+   at Xceed.Words.NET.DocX..ctor(Document document, XElement xml)
+   at Xceed.Words.NET.DocX.Load(String filename)
+   at Qiosk.App.Services.DocxBadgePrinter.PrintAsync(Attendee attendee, String printerName, String templatePath, CancellationToken cancellationToken) in d:\Qiosk\src\Qiosk.App\Services\DocxBadgePrinter.cs:line 43
+   at Qiosk.App.ViewModels.ShellViewModel.ConfirmCurrentAsync() in d:\Qiosk\src\Qiosk.App\ViewModels\ShellViewModel.cs:line 198
+2025-10-02 09:18:13.5360|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 

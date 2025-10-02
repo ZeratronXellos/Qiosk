@@ -1,0 +1,98 @@
+{
+  "version": 2,
+  "dgSpecHash": "HqDV5lNzuVs=",
+  "success": true,
+  "projectFilePath": "d:\\Qiosk\\src\\Qiosk.App\\Qiosk.App.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\aforge\\2.2.5\\aforge.2.2.5.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\aforge.video\\2.2.5\\aforge.video.2.2.5.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\aforge.video.directshow\\2.2.5\\aforge.video.directshow.2.2.5.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\closedxml\\0.105.0\\closedxml.0.105.0.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\closedxml.parser\\2.0.0\\closedxml.parser.2.0.0.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\documentformat.openxml\\3.1.1\\documentformat.openxml.3.1.1.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\documentformat.openxml.framework\\3.1.1\\documentformat.openxml.framework.3.1.1.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\excelnumberformat\\1.1.0\\excelnumberformat.1.1.0.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.9\\microsoft.extensions.configuration.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.9\\microsoft.extensions.configuration.abstractions.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.configuration.binder\\9.0.9\\microsoft.extensions.configuration.binder.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.configuration.commandline\\9.0.9\\microsoft.extensions.configuration.commandline.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.configuration.environmentvariables\\9.0.9\\microsoft.extensions.configuration.environmentvariables.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\9.0.9\\microsoft.extensions.configuration.fileextensions.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.configuration.json\\9.0.9\\microsoft.extensions.configuration.json.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.configuration.usersecrets\\9.0.9\\microsoft.extensions.configuration.usersecrets.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.9\\microsoft.extensions.dependencyinjection.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.9\\microsoft.extensions.dependencyinjection.abstractions.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.diagnostics\\9.0.9\\microsoft.extensions.diagnostics.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\9.0.9\\microsoft.extensions.diagnostics.abstractions.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\9.0.9\\microsoft.extensions.fileproviders.abstractions.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\9.0.9\\microsoft.extensions.fileproviders.physical.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\9.0.9\\microsoft.extensions.filesystemglobbing.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.hosting\\9.0.9\\microsoft.extensions.hosting.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\9.0.9\\microsoft.extensions.hosting.abstractions.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.logging\\9.0.9\\microsoft.extensions.logging.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.9\\microsoft.extensions.logging.abstractions.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.logging.configuration\\9.0.9\\microsoft.extensions.logging.configuration.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.logging.console\\9.0.9\\microsoft.extensions.logging.console.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.logging.debug\\9.0.9\\microsoft.extensions.logging.debug.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.logging.eventlog\\9.0.9\\microsoft.extensions.logging.eventlog.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.logging.eventsource\\9.0.9\\microsoft.extensions.logging.eventsource.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.options\\9.0.9\\microsoft.extensions.options.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\9.0.9\\microsoft.extensions.options.configurationextensions.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.9\\microsoft.extensions.primitives.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.office.interop.word\\15.0.4797.1004\\microsoft.office.interop.word.15.0.4797.1004.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\nlog\\6.0.4\\nlog.6.0.4.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\nlog.extensions.logging\\6.0.4\\nlog.extensions.logging.6.0.4.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\rbush.signed\\4.0.0\\rbush.signed.4.0.0.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\sixlabors.fonts\\1.0.0\\sixlabors.fonts.1.0.0.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\skiasharp\\2.88.8\\skiasharp.2.88.8.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.8\\skiasharp.nativeassets.macos.2.88.8.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.8\\skiasharp.nativeassets.win32.2.88.8.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\system.diagnostics.diagnosticsource\\9.0.9\\system.diagnostics.diagnosticsource.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.9\\system.diagnostics.eventlog.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\system.drawing.common\\8.0.12\\system.drawing.common.8.0.12.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\system.io.packaging\\8.0.1\\system.io.packaging.8.0.1.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\system.io.pipelines\\9.0.9\\system.io.pipelines.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\system.text.encodings.web\\9.0.9\\system.text.encodings.web.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\system.text.json\\9.0.9\\system.text.json.9.0.9.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\xceed.document.net\\5.1.25458.6676\\xceed.document.net.5.1.25458.6676.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\xceed.drawing.net\\1.0.25458.6676\\xceed.drawing.net.1.0.25458.6676.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\xceed.pdf\\5.1.25458.6676\\xceed.pdf.5.1.25458.6676.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\xceed.words.net\\5.1.25458.6676\\xceed.words.net.5.1.25458.6676.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\zxing.net\\0.16.10\\zxing.net.0.16.10.nupkg.sha512",
+    "C:\\Users\\lucian.olaru\\.nuget\\packages\\zxing.net.bindings.windows.compatibility\\0.16.13\\zxing.net.bindings.windows.compatibility.0.16.13.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AForge 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AForge",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AForge.Video 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AForge.Video",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AForge.Video.DirectShow 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AForge.Video.DirectShow",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
+}

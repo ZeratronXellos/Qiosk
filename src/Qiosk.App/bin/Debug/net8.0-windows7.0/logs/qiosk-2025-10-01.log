@@ -1,0 +1,96 @@
+2025-10-01 16:21:28.8884|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-01 16:21:28.9023|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-01 16:21:28.9023|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-01 16:22:04.1885|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-01 16:22:04.1987|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-01 16:22:04.1987|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-01 16:27:38.2129|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-01 16:27:38.2365|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-01 16:27:38.2365|INFO|Microsoft.Hosting.Lifetime|Content root path: d:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-01 16:29:18.0907|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-01 16:29:18.1320|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-01 16:29:18.1320|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-01 16:29:45.7402|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-01 16:29:45.7402|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-01 16:29:45.7402|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-01 16:29:46.6665|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-01 16:29:46.8090|ERROR|Qiosk.App.ViewModels.ShellViewModel|Fisierul Excel lipseste. System.IO.FileNotFoundException: Nu gasesc fi?ierul Excel la calea 'D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Data\attendees.xlsx'.
+File name: 'D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Data\attendees.xlsx'
+   at Qiosk.App.Services.ExcelAttendeeRepository.LoadAsync(CancellationToken cancellationToken) in D:\qiosk\src\Qiosk.App\Services\ExcelAttendeeRepository.cs:line 69
+   at Qiosk.App.ViewModels.ShellViewModel.LoadAttendeesAsync(CancellationToken cancellationToken) in D:\qiosk\src\Qiosk.App\ViewModels\ShellViewModel.cs:line 389
+2025-10-01 16:29:46.8687|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-01 16:29:49.4972|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-01 16:31:49.0985|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-01 16:32:29.1572|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-01 16:32:29.1793|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-01 16:32:29.1793|INFO|Microsoft.Hosting.Lifetime|Content root path: d:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-01 16:32:29.7331|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-01 16:32:29.7624|ERROR|Qiosk.App.ViewModels.ShellViewModel|Fisierul Excel lipseste. System.IO.FileNotFoundException: Nu gasesc fi?ierul Excel la calea 'd:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Data\attendees.xlsx'.
+File name: 'd:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Data\attendees.xlsx'
+   at Qiosk.App.Services.ExcelAttendeeRepository.LoadAsync(CancellationToken cancellationToken) in d:\Qiosk\src\Qiosk.App\Services\ExcelAttendeeRepository.cs:line 69
+   at Qiosk.App.ViewModels.ShellViewModel.LoadAttendeesAsync(CancellationToken cancellationToken) in d:\Qiosk\src\Qiosk.App\ViewModels\ShellViewModel.cs:line 389
+2025-10-01 16:32:29.7880|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-01 16:32:31.0353|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-01 16:32:58.5454|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-01 16:38:52.9249|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-01 16:38:52.9601|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-01 16:38:52.9601|INFO|Microsoft.Hosting.Lifetime|Content root path: d:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-01 16:38:53.4307|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-01 16:38:53.4453|ERROR|Qiosk.App.ViewModels.ShellViewModel|Fisierul Excel lipseste. System.IO.FileNotFoundException: Nu gasesc fi?ierul Excel la calea 'd:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Data\attendees.xlsx'.
+File name: 'd:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Data\attendees.xlsx'
+   at Qiosk.App.Services.ExcelAttendeeRepository.LoadAsync(CancellationToken cancellationToken) in d:\Qiosk\src\Qiosk.App\Services\ExcelAttendeeRepository.cs:line 69
+   at Qiosk.App.ViewModels.ShellViewModel.LoadAttendeesAsync(CancellationToken cancellationToken) in d:\Qiosk\src\Qiosk.App\ViewModels\ShellViewModel.cs:line 389
+2025-10-01 16:38:53.4784|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-01 16:38:54.5464|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-01 16:40:26.8048|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-01 16:40:50.1874|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-01 16:40:50.1969|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-01 16:40:50.1969|INFO|Microsoft.Hosting.Lifetime|Content root path: d:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-01 16:40:50.7184|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-01 16:40:50.7317|ERROR|Qiosk.App.ViewModels.ShellViewModel|Fisierul Excel lipseste. System.IO.FileNotFoundException: Nu gasesc fi?ierul Excel la calea 'd:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Data\attendees.xlsx'.
+File name: 'd:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Data\attendees.xlsx'
+   at Qiosk.App.Services.ExcelAttendeeRepository.LoadAsync(CancellationToken cancellationToken) in d:\Qiosk\src\Qiosk.App\Services\ExcelAttendeeRepository.cs:line 69
+   at Qiosk.App.ViewModels.ShellViewModel.LoadAttendeesAsync(CancellationToken cancellationToken) in d:\Qiosk\src\Qiosk.App\ViewModels\ShellViewModel.cs:line 389
+2025-10-01 16:40:50.7565|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-01 16:40:51.8122|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-01 16:41:25.9530|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-01 16:41:25.9895|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-01 16:41:25.9895|INFO|Microsoft.Hosting.Lifetime|Content root path: d:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-01 16:41:26.4499|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-01 16:41:26.4646|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from d:\Qiosk\src\Qiosk.App\Data\attendees.xlsx 
+2025-10-01 16:41:27.7101|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-01 16:41:27.7145|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-01 16:41:27.7145|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-01 16:41:28.2822|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-01 16:41:47.4483|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-01 16:41:50.6050|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-01 16:41:53.7081|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-01 16:41:56.7407|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-01 16:41:59.8141|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-01 16:44:36.9569|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-01 17:25:00.6495|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-01 17:25:00.6913|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-01 17:25:00.6913|INFO|Microsoft.Hosting.Lifetime|Content root path: d:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-01 17:25:01.4209|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-01 17:25:01.4438|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from d:\Qiosk\src\Qiosk.App\Data\attendees.xlsx 
+2025-10-01 17:25:02.1742|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-01 17:25:02.1810|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-01 17:25:02.1810|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-01 17:25:02.9098|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-01 17:25:14.1131|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-01 17:25:17.1432|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-01 17:25:17.9016|ERROR|Qiosk.App.ViewModels.ShellViewModel|Eroare la printarea ecusonului. System.Exception: Xceed.Document.NET.Licenser.LicenseKey property must be set to a valid license key in the code of your application before using this product. Please refer to the Licensing topic in the documentation for more information on this exception.
+   at Xceed.Utils.Exceptions.ThrowException.ThrowLicenseException(Type type, Object instance, String message)
+   at Xceed.Document.NET.DocumentLicense.ThrowNoKeyInCodeAndRegistry()
+   at Xceed.Utils.Licensing.XceedLicense.Initialize(String licenseKey, Type licenserType, Boolean allowThrow)
+   at Xceed.Utils.Licensing.XceedLicense.Initialize(String licenseKey, Type licenserType)
+   at Xceed.Document.NET.DocumentLicense.CreateLicense(String licenseKey, Type licenserType)
+   at Xceed.Document.NET.Licenser.VerifyLicense()
+   at Xceed.Document.NET.DocumentElement..ctor(Document document, XElement xml)
+   at Xceed.Document.NET.Container..ctor(Document document, XElement xml)
+   at Xceed.Document.NET.Document..ctor(Document document, XElement xml)
+   at Xceed.Words.NET.DocX..ctor(Document document, XElement xml)
+   at Xceed.Words.NET.DocX.Load(String filename)
+   at Qiosk.App.Services.DocxBadgePrinter.PrintAsync(Attendee attendee, String printerName, String templatePath, CancellationToken cancellationToken) in d:\Qiosk\src\Qiosk.App\Services\DocxBadgePrinter.cs:line 43
+   at Qiosk.App.ViewModels.ShellViewModel.ConfirmCurrentAsync() in d:\Qiosk\src\Qiosk.App\ViewModels\ShellViewModel.cs:line 198
+2025-10-01 17:25:31.8597|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
