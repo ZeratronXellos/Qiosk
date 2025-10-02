@@ -194,8 +194,8 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                        <Button Content="Nu sunt eu" Width="190" Command="{Binding CancelCurrentCommand}" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,16,0" />
-                        <Button Content="Confirma" Width="190" IsDefault="True" Command="{Binding ConfirmCurrentCommand}" />
+                        <Button Content="Nu sunt eu" Width="190" Height="56" Command="{Binding CancelCurrentCommand}" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,16,0" />
+                        <Button Content="Confirma" Width="190" Height="56" IsDefault="True" Command="{Binding ConfirmCurrentCommand}" />
                     </StackPanel>
                 </StackPanel>
             </Border>
