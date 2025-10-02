@@ -57,7 +57,6 @@ D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\NLog.dll
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\NLog.Extensions.Logging.dll
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\RBush.dll
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\SixLabors.Fonts.dll
-D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\SkiaSharp.dll
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\System.Diagnostics.DiagnosticSource.dll
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\System.Diagnostics.EventLog.dll
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\System.Drawing.Common.dll
@@ -65,16 +64,8 @@ D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\System.IO.Packaging.dll
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\System.IO.Pipelines.dll
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\System.Text.Encodings.Web.dll
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\System.Text.Json.dll
-D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Xceed.Document.NET.dll
-D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Xceed.Drawing.NET.dll
-D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Xceed.PDF.NET.dll
-D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Xceed.Words.NET.dll
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\zxing.dll
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ZXing.Windows.Compatibility.dll
-D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\runtimes\osx\native\libSkiaSharp.dylib
-D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\runtimes\win-arm64\native\libSkiaSharp.dll
-D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\runtimes\win-x64\native\libSkiaSharp.dll
-D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\runtimes\win-x86\native\libSkiaSharp.dll
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
@@ -88,3 +79,5 @@ D:\qiosk\src\Qiosk.App\obj\Debug\net8.0-windows7.0\ref\Qiosk.App.dll
 D:\qiosk\src\Qiosk.App\obj\Debug\net8.0-windows7.0\GeneratedInternalTypeHelper.g.cs
 D:\qiosk\src\Qiosk.App\obj\Debug\net8.0-windows7.0\Qiosk.App_MarkupCompile.lref
 D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Microsoft.Office.Interop.Word.dll
+D:\qiosk\src\Qiosk.App\obj\Debug\net8.0-windows7.0\Qiosk.App.sourcelink.json
+D:\qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\Office.dll

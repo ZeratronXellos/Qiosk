@@ -8,7 +8,6 @@ using Microsoft.Extensions.Logging;
 using Qiosk.App.Models;
 using Qiosk.App.Services.Contracts;
 using Word = Microsoft.Office.Interop.Word;
-using Xceed.Words.NET;
 
 namespace Qiosk.App.Services;
 
@@ -40,11 +39,8 @@ public sealed class DocxBadgePrinter : IBadgePrinter
 
         try
         {
-            using var document = DocX.Load(tempDocPath);
-            ApplyReplacements(document, attendee);
-            document.Save();
-
-            await PrintWithWordAsync(tempDocPath, printerName, cancellationToken).ConfigureAwait(false);
+            EnsureWordInstalled();
+            await PrintWithWordAsync(tempDocPath, printerName, attendee, cancellationToken).ConfigureAwait(false);
         }
         finally
         {
@@ -52,9 +48,73 @@ public sealed class DocxBadgePrinter : IBadgePrinter
         }
     }
 
-    private static void ApplyReplacements(DocX document, Attendee attendee)
+    private static Task PrintWithWordAsync(string docPath, string printerName, Attendee attendee, CancellationToken cancellationToken)
     {
-        var replacements = new Dictionary<string, string>
+        return RunOnStaThreadAsync(() =>
+        {
+            Word.Application? application = null;
+            Word.Document? document = null;
+            Word.Window? activeWindow = null;
+
+            try
+            {
+                application = new Word.Application
+                {
+                    Visible = true,
+                    DisplayAlerts = Word.WdAlertLevel.wdAlertsNone,
+                    ScreenUpdating = false
+                };
+
+                if (!string.IsNullOrWhiteSpace(printerName))
+                {
+                    application.ActivePrinter = printerName;
+                }
+
+                document = application.Documents.Open(
+                    docPath,
+                    ReadOnly: false,
+                    AddToRecentFiles: false,
+                    Visible: true);
+
+                document.Activate();
+
+                activeWindow = document.ActiveWindow;
+                if (activeWindow is not null)
+                {
+                    activeWindow.WindowState = Word.WdWindowState.wdWindowStateMinimize;
+                }
+
+                ApplyReplacements(document, attendee);
+
+                document.Save();
+                document.PrintOut(Background: false);
+            }
+            finally
+            {
+                if (activeWindow is not null)
+                {
+                    Marshal.FinalReleaseComObject(activeWindow);
+                }
+
+                if (document is not null)
+                {
+                    document.Close(false);
+                    Marshal.FinalReleaseComObject(document);
+                }
+
+                if (application is not null)
+                {
+                    application.Visible = false;
+                    application.Quit(false);
+                    Marshal.FinalReleaseComObject(application);
+                }
+            }
+        }, cancellationToken);
+    }
+
+    private static void ApplyReplacements(Word.Document document, Attendee attendee)
+    {
+        var replacements = new Dictionary<string, string?>
         {
             ["{{ID}}"] = attendee.Id,
             ["{{Nume}}"] = attendee.LastName,
@@ -65,49 +125,54 @@ public sealed class DocxBadgePrinter : IBadgePrinter
 
         foreach (var (placeholder, value) in replacements)
         {
-#pragma warning disable CS0618
-            document.ReplaceText(placeholder, value ?? string.Empty);
-#pragma warning restore CS0618
+            ReplaceAll(document, placeholder, value ?? string.Empty);
         }
     }
 
-    private Task PrintWithWordAsync(string docPath, string printerName, CancellationToken cancellationToken)
+    private static void ReplaceAll(Word.Document document, string placeholder, string value)
     {
-        return RunOnStaThreadAsync(() =>
+        Word.Range? range = null;
+        Word.Find? find = null;
+
+        try
         {
-            Word.Application? application = null;
-            Word.Document? document = null;
-
-            try
+            range = document.Content;
+            find = range.Find;
+            find.ClearFormatting();
+            find.Replacement.ClearFormatting();
+            find.Execute(
+                FindText: placeholder,
+                MatchCase: false,
+                MatchWholeWord: false,
+                MatchWildcards: false,
+                MatchSoundsLike: false,
+                MatchAllWordForms: false,
+                Forward: true,
+                Wrap: Word.WdFindWrap.wdFindContinue,
+                Format: false,
+                ReplaceWith: value,
+                Replace: Word.WdReplace.wdReplaceAll);
+        }
+        finally
+        {
+            if (find is not null)
             {
-                application = new Word.Application
-                {
-                    Visible = false
-                };
-
-                if (!string.IsNullOrWhiteSpace(printerName))
-                {
-                    application.ActivePrinter = printerName;
-                }
-
-                document = application.Documents.Open(docPath, ReadOnly: true, AddToRecentFiles: false, Visible: false);
-                document.PrintOut(Background: false);
+                Marshal.FinalReleaseComObject(find);
             }
-            finally
+
+            if (range is not null)
             {
-                if (document is not null)
-                {
-                    document.Close(false);
-                    Marshal.FinalReleaseComObject(document);
-                }
-
-                if (application is not null)
-                {
-                    application.Quit(false);
-                    Marshal.FinalReleaseComObject(application);
-                }
+                Marshal.FinalReleaseComObject(range);
             }
-        }, cancellationToken);
+        }
+    }
+
+    private static void EnsureWordInstalled()
+    {
+        if (Type.GetTypeFromProgID("Word.Application") is null)
+        {
+            throw new InvalidOperationException("Microsoft Word nu este instalat sau nu expune COM interop. Instaleaza Word (de preferat Office 2013 sau mai nou, 64-bit) ori componentele Office Primary Interop Assemblies.");
+        }
     }
 
     private static Task RunOnStaThreadAsync(Action action, CancellationToken cancellationToken)
@@ -161,8 +226,3 @@ public sealed class DocxBadgePrinter : IBadgePrinter
         }
     }
 }
-
-
-
-
-

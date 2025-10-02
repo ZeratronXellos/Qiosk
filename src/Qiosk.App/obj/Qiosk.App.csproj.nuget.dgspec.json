@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Qiosk\\src\\Qiosk.App\\Qiosk.App.csproj": {}
+    "D:\\Qiosk\\src\\Qiosk.App\\Qiosk.App.csproj": {}
   },
   "projects": {
-    "d:\\Qiosk\\src\\Qiosk.App\\Qiosk.App.csproj": {
+    "D:\\Qiosk\\src\\Qiosk.App\\Qiosk.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Qiosk\\src\\Qiosk.App\\Qiosk.App.csproj",
+        "projectUniqueName": "D:\\Qiosk\\src\\Qiosk.App\\Qiosk.App.csproj",
         "projectName": "Qiosk.App",
-        "projectPath": "d:\\Qiosk\\src\\Qiosk.App\\Qiosk.App.csproj",
+        "projectPath": "D:\\Qiosk\\src\\Qiosk.App\\Qiosk.App.csproj",
         "packagesPath": "C:\\Users\\lucian.olaru\\.nuget\\packages\\",
-        "outputPath": "d:\\Qiosk\\src\\Qiosk.App\\obj\\",
+        "outputPath": "D:\\Qiosk\\src\\Qiosk.App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -74,6 +74,10 @@
               "target": "Package",
               "version": "[15.0.4797.1004, )"
             },
+            "MicrosoftOfficeCore": {
+              "target": "Package",
+              "version": "[15.0.0, )"
+            },
             "NLog": {
               "target": "Package",
               "version": "[6.0.4, )"
@@ -81,10 +85,6 @@
             "NLog.Extensions.Logging": {
               "target": "Package",
               "version": "[6.0.4, )"
-            },
-            "Xceed.Words.NET": {
-              "target": "Package",
-              "version": "[5.1.25458.6676, )"
             },
             "ZXing.Net": {
               "target": "Package",

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-d:\Qiosk\src\Qiosk.App\obj\Debug\net8.0-windows7.0\
+D:\qiosk\src\Qiosk.App\obj\Debug\net8.0-windows7.0\
 Qiosk.App
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-d:\Qiosk\src\Qiosk.App\App.xaml
+D:\qiosk\src\Qiosk.App\App.xaml
 22075566511
 
 21851739939
-248-1041274552
+244469726964
 Resources\Theme.xaml;Views\ShellWindow.xaml;
 
 False

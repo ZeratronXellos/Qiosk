@@ -23,3 +23,50 @@
    at Qiosk.App.Services.DocxBadgePrinter.PrintAsync(Attendee attendee, String printerName, String templatePath, CancellationToken cancellationToken) in d:\Qiosk\src\Qiosk.App\Services\DocxBadgePrinter.cs:line 43
    at Qiosk.App.ViewModels.ShellViewModel.ConfirmCurrentAsync() in d:\Qiosk\src\Qiosk.App\ViewModels\ShellViewModel.cs:line 198
 2025-10-02 09:18:13.5360|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 09:30:37.3733|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 09:30:37.3847|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 09:30:37.3847|INFO|Microsoft.Hosting.Lifetime|Content root path: d:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-02 09:30:38.0201|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 09:30:38.0400|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from d:\Qiosk\src\Qiosk.App\Data\attendees.xlsx 
+2025-10-02 09:30:38.7746|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-02 09:30:38.7746|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-02 09:30:38.7746|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 09:30:39.4934|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 09:30:48.9003|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 09:30:51.3650|ERROR|Qiosk.App.ViewModels.ShellViewModel|Eroare la printarea ecusonului. System.IO.FileNotFoundException: Could not load file or assembly 'office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c'. The system cannot find the file specified.
+File name: 'office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c'
+   at Qiosk.App.Services.DocxBadgePrinter.<>c__DisplayClass3_0.<PrintWithWordAsync>b__0()
+   at Qiosk.App.Services.DocxBadgePrinter.<>c__DisplayClass6_0.<RunOnStaThreadAsync>b__1() in d:\Qiosk\src\Qiosk.App\Services\DocxBadgePrinter.cs:line 161
+--- End of stack trace from previous location ---
+   at Qiosk.App.Services.DocxBadgePrinter.PrintAsync(Attendee attendee, String printerName, String templatePath, CancellationToken cancellationToken) in d:\Qiosk\src\Qiosk.App\Services\DocxBadgePrinter.cs:line 42
+   at Qiosk.App.ViewModels.ShellViewModel.ConfirmCurrentAsync() in d:\Qiosk\src\Qiosk.App\ViewModels\ShellViewModel.cs:line 198
+2025-10-02 09:31:01.1999|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 09:31:15.7084|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 09:31:15.7447|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 09:31:15.7447|INFO|Microsoft.Hosting.Lifetime|Content root path: d:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-02 09:31:16.2162|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 09:31:16.2296|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from d:\Qiosk\src\Qiosk.App\Data\attendees.xlsx 
+2025-10-02 09:31:16.8583|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-02 09:31:16.8583|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-02 09:31:16.8583|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 09:31:17.4079|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 09:32:01.4905|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 09:44:10.6653|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 09:44:10.6929|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 09:44:10.6929|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-02 09:44:11.1933|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 09:44:11.2047|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from d:\Qiosk\src\Qiosk.App\Data\attendees.xlsx 
+2025-10-02 09:44:11.8248|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-02 09:44:11.8282|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-02 09:44:11.8282|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 09:44:12.6073|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 09:44:17.8089|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 09:44:43.0512|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 09:44:44.4925|ERROR|Qiosk.App.ViewModels.ShellViewModel|Eroare la printarea ecusonului. System.IO.FileNotFoundException: Could not load file or assembly 'office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c'. The system cannot find the file specified.
+File name: 'office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c'
+   at Qiosk.App.Services.DocxBadgePrinter.<>c__DisplayClass3_0.<PrintWithWordAsync>b__0()
+   at Qiosk.App.Services.DocxBadgePrinter.<>c__DisplayClass7_0.<RunOnStaThreadAsync>b__1() in D:\qiosk\src\Qiosk.App\Services\DocxBadgePrinter.cs:line 170
+--- End of stack trace from previous location ---
+   at Qiosk.App.Services.DocxBadgePrinter.PrintAsync(Attendee attendee, String printerName, String templatePath, CancellationToken cancellationToken) in D:\qiosk\src\Qiosk.App\Services\DocxBadgePrinter.cs:line 43
+   at Qiosk.App.ViewModels.ShellViewModel.ConfirmCurrentAsync() in D:\qiosk\src\Qiosk.App\ViewModels\ShellViewModel.cs:line 198
+2025-10-02 09:44:50.0821|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 

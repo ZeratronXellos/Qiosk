@@ -13,6 +13,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Qiosk.App
-build_property.ProjectDir = d:\Qiosk\src\Qiosk.App\
+build_property.ProjectDir = D:\qiosk\src\Qiosk.App\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

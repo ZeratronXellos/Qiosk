@@ -1,7 +1,7 @@
 {
-  "DefaultPrinter": "\\\\192.168.15.55\\112PR-QMISOAD",
+  "DefaultPrinter": "Microsoft Print to PDF",
   "DefaultCameraMoniker": "@device:pnp:\\\\?\\usb#vid_30c9\u0026pid_00c2\u0026mi_00#6\u00263158ba07\u00260\u00260000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
-  "LockMode": true,
+  "LockMode": false,
   "ExcelPathOverride": "d:\\Qiosk\\src\\Qiosk.App\\Data\\attendees.xlsx",
   "TemplatePathOverride": "d:\\Qiosk\\src\\Qiosk.App\\Templates\\badge-template.docx",
   "ReloadOnStart": true

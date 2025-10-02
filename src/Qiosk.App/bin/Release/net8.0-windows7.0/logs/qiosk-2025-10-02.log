@@ -1,0 +1,42 @@
+2025-10-02 10:05:31.3148|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 10:05:31.3236|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 10:05:31.3236|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\ 
+2025-10-02 10:05:31.8356|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 10:05:31.8810|ERROR|Qiosk.App.ViewModels.ShellViewModel|Fisierul Excel lipseste. System.IO.FileNotFoundException: Nu gasesc fi?ierul Excel la calea 'D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.xlsx'.
+File name: 'D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.xlsx'
+   at Qiosk.App.Services.ExcelAttendeeRepository.LoadAsync(CancellationToken cancellationToken) in D:\qiosk\src\Qiosk.App\Services\ExcelAttendeeRepository.cs:line 69
+   at Qiosk.App.ViewModels.ShellViewModel.LoadAttendeesAsync(CancellationToken cancellationToken) in D:\qiosk\src\Qiosk.App\ViewModels\ShellViewModel.cs:line 389
+2025-10-02 10:05:31.9169|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 10:05:33.1652|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 10:05:59.2890|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 10:06:23.3096|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 10:06:23.3187|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 10:06:23.3279|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\ 
+2025-10-02 10:06:23.8145|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 10:06:23.8262|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.xlsx 
+2025-10-02 10:06:24.4771|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-02 10:06:24.4771|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-02 10:06:24.4771|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 10:06:25.0789|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 10:06:51.0291|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 10:06:54.6384|ERROR|Qiosk.App.ViewModels.ShellViewModel|Eroare la printarea ecusonului. System.Runtime.InteropServices.COMException (0x800A11FD): This method or property is not available because a document window is not active.
+   at Microsoft.Office.Interop.Word.DocumentClass.PrintOut(Object& Background, Object& Append, Object& Range, Object& OutputFileName, Object& From, Object& To, Object& Item, Object& Copies, Object& Pages, Object& PageType, Object& PrintToFile, Object& Collate, Object& ActivePrinterMacGX, Object& ManualDuplexPrint, Object& PrintZoomColumn, Object& PrintZoomRow, Object& PrintZoomPaperWidth, Object& PrintZoomPaperHeight)
+   at Qiosk.App.Services.DocxBadgePrinter.<>c__DisplayClass3_0.<PrintWithWordAsync>b__0() in D:\qiosk\src\Qiosk.App\Services\DocxBadgePrinter.cs:line 75
+   at Qiosk.App.Services.DocxBadgePrinter.<>c__DisplayClass7_0.<RunOnStaThreadAsync>b__1() in D:\qiosk\src\Qiosk.App\Services\DocxBadgePrinter.cs:line 170
+--- End of stack trace from previous location ---
+   at Qiosk.App.Services.DocxBadgePrinter.PrintAsync(Attendee attendee, String printerName, String templatePath, CancellationToken cancellationToken) in D:\qiosk\src\Qiosk.App\Services\DocxBadgePrinter.cs:line 43
+   at Qiosk.App.ViewModels.ShellViewModel.ConfirmCurrentAsync() in D:\qiosk\src\Qiosk.App\ViewModels\ShellViewModel.cs:line 198
+2025-10-02 10:07:02.8604|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 10:15:27.0414|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 10:15:27.0760|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 10:15:27.0760|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\ 
+2025-10-02 10:15:27.5599|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 10:15:27.5777|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from D:\Qiosk\src\Qiosk.App\bin\Release\net8.0-windows7.0\Data\attendees.xlsx 
+2025-10-02 10:15:28.2405|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-02 10:15:28.2405|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-02 10:15:28.2405|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 10:15:28.9489|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 10:15:34.5474|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 10:16:45.4255|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 10:21:55.9233|INFO|Qiosk.App.Services.QrScannerService|Cod QR detectat: https://www.quartzmatrix.ro/wp-admin/edit.php?post_type=etn-attendee&etn_action=ticket_scanner&attendee_id=10788&ticket_id=mh063yroy6 
+2025-10-02 10:45:16.0439|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
