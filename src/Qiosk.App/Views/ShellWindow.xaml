@@ -12,6 +12,10 @@
         Background="{StaticResource SurfaceBrush}"
         Loaded="OnLoaded"
         Closing="OnClosing">
+    <Window.InputBindings>
+        <KeyBinding Key="Q" Modifiers="Control" Command="{Binding ExitApplicationCommand}" />
+        <KeyBinding Key="R" Modifiers="Control" Command="{Binding ReloadExcelCommand}" />
+    </Window.InputBindings>
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
         <infra:InverseBooleanToVisibilityConverter x:Key="InverseBoolToVisibility" />

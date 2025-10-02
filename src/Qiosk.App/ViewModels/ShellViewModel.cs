@@ -6,6 +6,7 @@ using System.Linq;
 using System.Media;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -329,6 +330,38 @@ public partial class ShellViewModel : ObservableObject, IDisposable
     }
 
     [RelayCommand]
+    private async Task ExitApplicationAsync()
+    {
+        try
+        {
+            await _qrScannerService.StopAsync().ConfigureAwait(false);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Nu am putut opri camera inainte de iesire.");
+        }
+
+        await _dispatcher.InvokeAsync(() =>
+        {
+            try
+            {
+                if (Application.Current?.MainWindow is Window window)
+                {
+                    window.Close();
+                }
+                else
+                {
+                    Application.Current?.Shutdown();
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Nu am putut inchide aplicatia prin scurtatura.");
+                Application.Current?.Shutdown();
+            }
+        }, DispatcherPriority.Normal);
+    }
+    [RelayCommand]
     private async Task ReloadExcelAsync()
     {
         await LoadAttendeesAsync().ConfigureAwait(false);
@@ -485,24 +518,48 @@ public partial class ShellViewModel : ObservableObject, IDisposable
     }
     private void ShowStatus(string message, bool isError, TimeSpan? hideAfter = null)
     {
-        _statusTimer.Stop();
-        StatusMessage = message;
-        IsStatusError = isError;
-        IsStatusVisible = true;
-
-        if (hideAfter is { } duration && duration > TimeSpan.Zero)
+        void ApplyStatus()
         {
-            _statusTimer.Interval = duration;
-            _statusTimer.Start();
+            _statusTimer.Stop();
+            StatusMessage = message;
+            IsStatusError = isError;
+            IsStatusVisible = true;
+
+            if (hideAfter is { } duration && duration > TimeSpan.Zero)
+            {
+                _statusTimer.Interval = duration;
+                _statusTimer.Start();
+            }
+        }
+
+        if (_dispatcher.CheckAccess())
+        {
+            ApplyStatus();
+        }
+        else
+        {
+            _dispatcher.Invoke(ApplyStatus);
         }
     }
 
     private void HideStatus()
     {
-        _statusTimer.Stop();
-        IsStatusVisible = false;
-        StatusMessage = string.Empty;
-        IsStatusError = false;
+        void ApplyHide()
+        {
+            _statusTimer.Stop();
+            IsStatusVisible = false;
+            StatusMessage = string.Empty;
+            IsStatusError = false;
+        }
+
+        if (_dispatcher.CheckAccess())
+        {
+            ApplyHide();
+        }
+        else
+        {
+            _dispatcher.Invoke(ApplyHide);
+        }
     }
 
     private void OnStatusTimerTick(object? sender, EventArgs e) => HideStatus();
@@ -608,16 +665,4 @@ public partial class ShellViewModel : ObservableObject, IDisposable
         _qrScannerService.StopAsync().GetAwaiter().GetResult();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -70,3 +70,59 @@ File name: 'office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111
    at Qiosk.App.Services.DocxBadgePrinter.PrintAsync(Attendee attendee, String printerName, String templatePath, CancellationToken cancellationToken) in D:\qiosk\src\Qiosk.App\Services\DocxBadgePrinter.cs:line 43
    at Qiosk.App.ViewModels.ShellViewModel.ConfirmCurrentAsync() in D:\qiosk\src\Qiosk.App\ViewModels\ShellViewModel.cs:line 198
 2025-10-02 09:44:50.0821|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 13:03:07.3662|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 13:03:07.4108|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 13:03:07.4108|INFO|Microsoft.Hosting.Lifetime|Content root path: d:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-02 13:03:08.8025|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 13:03:08.8502|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from d:\Qiosk\src\Qiosk.App\Data\attendees.xlsx 
+2025-10-02 13:03:10.7443|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-02 13:03:10.7545|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-02 13:03:10.7545|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 13:03:12.1674|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 13:03:17.6478|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from d:\Qiosk\src\Qiosk.App\Data\attendees.xlsx 
+2025-10-02 13:03:17.6769|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-02 13:03:17.6769|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-02 13:03:41.4078|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 13:03:41.4704|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 13:03:41.4704|INFO|Microsoft.Hosting.Lifetime|Content root path: d:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-02 13:03:42.9884|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 13:03:43.0274|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from d:\Qiosk\src\Qiosk.App\Data\attendees.xlsx 
+2025-10-02 13:03:44.9669|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-02 13:03:44.9796|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-02 13:03:44.9796|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 13:03:45.7508|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 13:03:48.0775|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 13:12:42.0213|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 13:12:42.0642|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 13:12:42.0642|INFO|Microsoft.Hosting.Lifetime|Content root path: d:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-02 13:12:43.3497|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 13:12:43.3801|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from d:\Qiosk\src\Qiosk.App\Data\attendees.xlsx 
+2025-10-02 13:12:44.9080|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-02 13:12:44.9175|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-02 13:12:44.9175|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 13:12:45.8031|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 13:12:45.8031|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 13:12:47.2981|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2025-10-02 13:12:55.2451|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 13:12:55.2874|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 13:12:55.2874|INFO|Microsoft.Hosting.Lifetime|Content root path: d:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-02 13:12:56.7029|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 13:12:56.7425|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from d:\Qiosk\src\Qiosk.App\Data\attendees.xlsx 
+2025-10-02 13:12:58.6618|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-02 13:12:58.6618|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-02 13:12:58.6618|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 13:12:59.4708|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 13:13:03.1675|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 13:16:06.4041|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2025-10-02 13:16:06.4705|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2025-10-02 13:16:06.4705|INFO|Microsoft.Hosting.Lifetime|Content root path: d:\Qiosk\src\Qiosk.App\bin\Debug\net8.0-windows7.0\ 
+2025-10-02 13:16:08.1665|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 13:16:08.2076|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from d:\Qiosk\src\Qiosk.App\Data\attendees.xlsx 
+2025-10-02 13:16:10.1838|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-02 13:16:10.1929|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-02 13:16:10.1929|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 
+2025-10-02 13:16:11.3231|INFO|Qiosk.App.Services.QrScannerService|Porneste camera cu moniker @device:pnp:\\?\usb#vid_30c9&pid_00c2&mi_00#6&3158ba07&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global 
+2025-10-02 13:16:13.8903|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loading attendees from d:\Qiosk\src\Qiosk.App\Data\attendees.xlsx 
+2025-10-02 13:16:13.9105|INFO|Qiosk.App.Services.ExcelAttendeeRepository|Loaded 2 attendees from Excel. 
+2025-10-02 13:16:13.9109|INFO|Qiosk.App.ViewModels.ShellViewModel|2 participanti incarcati din Excel. 
+2025-10-02 13:16:16.1663|INFO|Qiosk.App.Services.QrScannerService|Oprire camera QR 

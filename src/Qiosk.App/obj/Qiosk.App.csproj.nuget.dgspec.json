@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Qiosk\\src\\Qiosk.App\\Qiosk.App.csproj": {}
+    "D:\\qiosk\\src\\Qiosk.App\\Qiosk.App.csproj": {}
   },
   "projects": {
-    "D:\\Qiosk\\src\\Qiosk.App\\Qiosk.App.csproj": {
+    "D:\\qiosk\\src\\Qiosk.App\\Qiosk.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Qiosk\\src\\Qiosk.App\\Qiosk.App.csproj",
+        "projectUniqueName": "D:\\qiosk\\src\\Qiosk.App\\Qiosk.App.csproj",
         "projectName": "Qiosk.App",
-        "projectPath": "D:\\Qiosk\\src\\Qiosk.App\\Qiosk.App.csproj",
+        "projectPath": "D:\\qiosk\\src\\Qiosk.App\\Qiosk.App.csproj",
         "packagesPath": "C:\\Users\\lucian.olaru\\.nuget\\packages\\",
-        "outputPath": "D:\\Qiosk\\src\\Qiosk.App\\obj\\",
+        "outputPath": "D:\\qiosk\\src\\Qiosk.App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -36,6 +36,9 @@
           }
         },
         "warningProperties": {
+          "noWarn": [
+            "NU1701"
+          ],
           "warnAsError": [
             "NU1605"
           ]

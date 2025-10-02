@@ -1,0 +1,8 @@
+Badge de test
+
+                                                                      {{ID}}
+              
+    {{Nume}}
+                                            {{Prenume}}
+                                                                            {{Companie}}
+{{Rol}}
